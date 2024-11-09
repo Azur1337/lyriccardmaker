@@ -28,7 +28,7 @@ const App = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:1337/api/search?q=${query}`);
+      const response = await fetch(`https://lyriccardmaker.azurmeow.com/api/search?q=${query}`);
       const data = await response.json();
       if (data.response.hits) {
         setSearchResults(data.response.hits.slice(0, 5));
